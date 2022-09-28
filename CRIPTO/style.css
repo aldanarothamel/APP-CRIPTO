@@ -1,0 +1,33 @@
+body {
+    background-color: #031926;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h2 {
+    text-align: center;
+    color: #9DBEBB;
+}
+.tabla-css {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 600px;
+    box-shadow: 0 0 25px #468189;
+    border-collapse: collapse;
+ 
+}
+.tabla-css thead tr {
+    background-color: #77CCA2;
+    color: #031926;
+    text-align: center;
+   
+}
+.tabla-css th,
+.tabla-css td {
+    padding: 20px 20px;
+    text-align: center;
+    color: #F4E9CD;
+    
+}
+.tabla-css tbody tr:nth-of-type(even){
+ background-color: #6DBEBB;   
+}
+

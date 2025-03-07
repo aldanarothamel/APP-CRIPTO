@@ -1,15 +1,20 @@
-let endpoint = 'https://api.binance.com/api/v3/ticker/price'
-fetch(endpoint)
-    .then( respuesta => respuesta.json() )
-    .then( datos => mostrarData(datos))
-    .catch( e => console.log(e))
+const endpoint = 'https://api.binance.com/api/v3/ticker/price';
 
-
-const mostrarData = (data)=>{
-    //console.log(data)
-    let body = ''
-    for (let i=0; i < data.length; i++) {
-        body += `<tr><td>${data[i].symbol}</td><td>${data[i].price}</td></tr>`
+const fetchData = async () => {
+    try {
+        const response = await fetch(endpoint);
+        const data = await response.json();
+        mostrarData(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
-    document.getElementById('data').innerHTML = body
-}    
+};
+
+const mostrarData = (data) => {
+    const body = data.map(({ symbol, price }) => 
+        `<tr><td>${symbol}</td><td>${price}</td></tr>`
+    ).join('');
+    document.getElementById('data').innerHTML = body;
+};
+
+fetchData();

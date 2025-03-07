@@ -4,12 +4,19 @@ body {
 }
 h2 {
     text-align: center;
+    font-size: 3rem;
     color: #9DBEBB;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+
 }
 .tabla-css {
     margin-left: auto;
     margin-right: auto;
     min-width: 600px;
+    max-height: 700px;
     box-shadow: 0 0 25px #468189;
     border-collapse: collapse;
  
@@ -18,9 +25,24 @@ h2 {
     background-color: #77CCA2;
     color: #031926;
     text-align: center;
-   
+
 }
-.tabla-css th,
+.a {
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #45f353;
+    color: #031926;
+    border-radius: 5px;
+}
+
+.b {
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #fce357;
+    color: #031926;
+    border-radius: 5px;
+}
+
 .tabla-css td {
     padding: 20px 20px;
     text-align: center;
@@ -28,6 +50,6 @@ h2 {
     
 }
 .tabla-css tbody tr:nth-of-type(even){
- background-color: #6DBEBB;   
-}
+ background-color: #6DBEBB;  
+ }
 
